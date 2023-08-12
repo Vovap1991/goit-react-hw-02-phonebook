@@ -34,6 +34,10 @@ export const FormButton = styled.button`
   background-color: white;
 `;
 
-export const StyledError = styled(ErrorMessage)`
+export const StyledErrorName = styled(ErrorMessage)`
+  color: red;
+`;
+
+export const StyledErrorNumber = styled(ErrorMessage)`
   color: red;
 `;

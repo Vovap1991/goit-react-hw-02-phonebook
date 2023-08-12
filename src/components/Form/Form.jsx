@@ -7,11 +7,13 @@ import {
   FormInput,
   FormLabel,
   FormButton,
-  StyledError,
+  StyledErrorName,
+  StyledErrorNumber,
 } from './Form.styled';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
+  number: Yup.number().min(12).required('Required'),
 });
 
 export const ContactForm = ({ onAddContact }) => {
@@ -19,6 +21,7 @@ export const ContactForm = ({ onAddContact }) => {
     <Formik
       initialValues={{
         name: '',
+        number: '',
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
@@ -29,7 +32,11 @@ export const ContactForm = ({ onAddContact }) => {
       <StyledForm>
         <FormLabel htmlFor="name">Name</FormLabel>
         <FormInput type="text" name="name" placeholder="Ivan Ivanenko" />
-        <StyledError name="name" component="div" />
+        <StyledErrorName name="name" component="div" />
+
+        <FormLabel htmlFor="number">Number</FormLabel>
+        <FormInput type="tel" name="number" placeholder="380631111111" />
+        <StyledErrorNumber name="name" component="div" />
         <FormButton type="submit">Add contact</FormButton>
       </StyledForm>
     </Formik>
