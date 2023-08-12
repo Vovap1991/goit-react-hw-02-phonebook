@@ -37,6 +37,7 @@ export class App extends Component {
             <ContactForm onAddContact={this.addContact}></ContactForm>
           </div>
           <div>
+            <FormTitle>Contacts</FormTitle>
             <ContactList contacts={this.state.contacts} />
           </div>
         </Application>
