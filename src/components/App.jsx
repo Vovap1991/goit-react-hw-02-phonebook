@@ -11,12 +11,6 @@ export class App extends Component {
   };
 
   addContact = newContact => {
-    this.setState(prevState => {
-      return {
-        contacts: [...prevState.contacts, newContact],
-      };
-    });
-
     const { contacts } = this.state;
 
     const isContactExists = contacts.find(
@@ -26,6 +20,12 @@ export class App extends Component {
     if (isContactExists) {
       return alert(`${newContact.name} is already in your phonebook`);
     }
+
+    this.setState(prevState => {
+      return {
+        contacts: [...prevState.contacts, newContact],
+      };
+    });
   };
 
   render() {

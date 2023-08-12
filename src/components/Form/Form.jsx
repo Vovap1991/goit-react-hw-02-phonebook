@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
-import { Formik, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import {
   StyledForm,
   FormInput,
@@ -21,7 +22,7 @@ export const ContactForm = ({ onAddContact }) => {
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        onAddContact(values);
+        onAddContact({ ...values, id: nanoid() });
         actions.resetForm();
       }}
     >
