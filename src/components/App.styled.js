@@ -9,4 +9,5 @@ export const Application = styled.div`
 
 export const FormTitle = styled.h2`
   font-size: 40px;
+  margin: 30px auto;
 `;

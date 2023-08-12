@@ -23,6 +23,7 @@ export const FormInput = styled(Field)`
 `;
 
 export const FormButton = styled.button`
+  cursor: pointer;
   outline: none;
   width: 70%;
   height: 30px;
@@ -32,6 +33,10 @@ export const FormButton = styled.button`
   margin-top: 40px;
   margin-bottom: 10px;
   background-color: white;
+
+  /* :hover {
+    background-color: blue;
+  } */
 `;
 
 export const StyledErrorName = styled(ErrorMessage)`
