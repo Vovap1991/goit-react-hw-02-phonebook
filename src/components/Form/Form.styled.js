@@ -20,6 +20,11 @@ export const FormInput = styled(Field)`
   font-size: 20px;
   border-radius: 10px;
   margin-bottom: 10px;
+  transition: border 300ms linear;
+
+  &:is(:focus, :hover) {
+    border: 2px solid #358ff0;
+  }
 `;
 
 export const FormButton = styled.button`
@@ -33,10 +38,12 @@ export const FormButton = styled.button`
   margin-top: 40px;
   margin-bottom: 10px;
   background-color: white;
+  transition: background-color 300ms linear, color 300ms linear;
 
-  /* :hover {
-    background-color: blue;
-  } */
+  &:is(:focus, :hover) {
+    color: white;
+    background-color: #358ff0;
+  }
 `;
 
 export const StyledErrorName = styled(ErrorMessage)`

@@ -20,4 +20,9 @@ export const FilterInput = styled.input`
   font-size: 20px;
   border-radius: 10px;
   margin-bottom: 10px;
+  transition: border 300ms linear;
+
+  &:is(:focus, :hover) {
+    border: 2px solid #358ff0;
+  }
 `;

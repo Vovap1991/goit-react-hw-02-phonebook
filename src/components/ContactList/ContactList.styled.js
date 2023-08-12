@@ -25,8 +25,10 @@ export const DeleteContactButton = styled.button`
   font-size: 15px;
   border-radius: 10px;
   background-color: white;
+  transition: background-color 300ms linear, color 300ms linear;
 
-  :hover {
-    background-color: blue;
+  &:is(:focus, :hover) {
+    color: white;
+    background-color: #358ff0;
   }
 `;
