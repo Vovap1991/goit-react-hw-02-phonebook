@@ -13,7 +13,7 @@ import {
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
-  number: Yup.number().min(12).required('Required'),
+  number: Yup.number().min(6).required('Required'),
 });
 
 export const ContactForm = ({ onAddContact }) => {
